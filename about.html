@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakmaga | About Us</title>
+
+    <!-- Google Fonts -->
+    <link rel="icon" href="assets/images/icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 10rem 10% 4rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .abstract-text {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top gradient accent line on hover */
+        .team-card::before {
+            content: ''; 
+            position: absolute; 
+            top: 0; left: 0; 
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0; 
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            border-color: var(--primary-dim);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15) !important;
+        }
+
+        .team-card:hover::before {
+            opacity: 1;
+        }
+
+        .team-img-wrapper {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--primary-dim);
+            padding: 4px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: var(--bg-darker);
+        }
+
+        /* Image pops up, rotates slightly, and glows */
+        .team-card:hover .team-img-wrapper {
+            transform: scale(1.15) translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+            padding: 0px; 
+        }
+
+        .team-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .team-card:hover .team-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .team-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+            transition: var(--transition);
+        }
+
+        .team-card:hover .team-info h3 {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .team-info .role {
+            color: var(--primary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .team-info .email {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .team-card:hover .team-info .email {
+            color: var(--text-main);
+        }
+
+        .team-card:hover .team-info .email i {
+            color: var(--secondary);
+            transform: scale(1.2);
+        }
+
+        .gap-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .list-icon {
+            color: #7b2cbf;
+            font-size: 2.5rem;
+        }
+
+        .list-content h4 {
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Background glowing orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga<span class="dot">.</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Project <i class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#features" class="dropdown-item"><i class="ph ph-star"></i> Features</a>
+                        <a href="index.html#tech" class="dropdown-item"><i class="ph ph-cpu"></i> Technologies</a>
+                        <a href="index.html#gallery" class="dropdown-item"><i class="ph ph-image"></i> Gallery</a>
+                        <a href="index.html#impact" class="dropdown-item"><i class="ph ph-trend-up"></i> Impact</a>
+                    </div>
+                </div>
+                <a href="domain.html" class="nav-link">Domain</a>
+                <a href="milestones.html" class="nav-link">Milestones</a>
+                <a href="documents.html" class="nav-link">Documents</a>
+                <a href="presentations.html" class="nav-link">Presentations</a>
+                <a href="contact.html" class="nav-link nav-btn">Contact Us</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="badge fade-in-up">The Research Group</div>
+        <h1 class="hero-title fade-in-up delay-1">About <span class="gradient-text">Us</span></h1>
+        <p class="hero-subtitle fade-in-up delay-2" style="margin: 0 auto; max-width: 700px;">Meet the dedicated team, our origins, and the milestones we've conquered throughout this academic journey.</p>
+    </header>
+
+    <!-- Project Background & Achievements -->
+    <section class="section" style="padding-top: 0; min-height: auto;">
+        <div class="container">
+            <!-- Background Section -->
+            <div class="section-header fade-in-up" style="margin-bottom: 2rem;">
+                <h2 style="font-size: 2.2rem;">Project <span class="gradient-text">Background</span></h2>
+            </div>
+            <p class="abstract-text fade-in-up delay-1" style="max-width: 900px; margin: 0 auto 5rem auto;">
+                The <strong>Lakmaga</strong> project is developed by final-year Information Technology undergraduate students at the <strong>Sri Lanka Institute of Information Technology (SLIIT)</strong>. Our mission is to fundamentally improve STEM education in Sri Lanka by designing an immersive, curriculum-aligned VR technology platform that breaks the limitations of traditional classroom boundaries.
+            </p>
+
+            <!-- Achievements Section -->
+            <div class="section-header fade-in-up" style="margin-bottom: 2rem;">
+                <h2 style="font-size: 2.2rem;">Key <span class="gradient-text">Achievements</span></h2>
+            </div>
+            <div class="gap-list fade-in-up delay-2" style="margin-bottom: 5rem;">
+                <div class="list-item">
+                    <i class="ph ph-medal list-icon"></i>
+                    <div class="list-content">
+                        <h4>Developed a comprehensive VR learning system mapped directly to local syllabuses.</h4>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <i class="ph ph-chart-polar list-icon"></i>
+                    <div class="list-content">
+                        <h4>Successfully implemented engaging gamification loops within STEM education modules.</h4>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <i class="ph ph-map-pin list-icon"></i>
+                    <div class="list-content">
+                        <h4>Created a deeply culturally relevant internal environment (ancient Sigiriya).</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section section-darker">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">The <span class="gradient-text">Developers</span></h2>
+                <p class="section-desc">The researchers and software engineers bringing Lakmaga to life.</p>
+            </div>
+            
+            <div class="team-grid fade-in-up delay-1">
+                
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/images/avatar.png" alt="Group Leader">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dayananda W.C.R.</h3>
+                        <p class="role">Group Leader & Tech Lead</p>
+                        <p class="email"><i class="ph ph-envelope-simple"></i> it22561602@my.sliit.lk</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/images/avatar.png" alt="UI/UX Designer">
+                    </div>
+                    <div class="team-info">
+                        <h3>Wijenarayana C.H</h3>
+                        <p class="role">UI/UX Designer & Researcher</p>
+                        <p class="email"><i class="ph ph-envelope-simple"></i> it22132314@my.sliit.lk</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/images/avatar.png" alt="VR Developer">
+                    </div>
+                    <div class="team-info">
+                        <h3>Jayalath K.M.K.D</h3>
+                        <p class="role">VR Engine Developer</p>
+                        <p class="email"><i class="ph ph-envelope-simple"></i> it22581570@my.sliit.lk</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/images/avatar.png" alt="Backend Developer">
+                    </div>
+                    <div class="team-info">
+                        <h3>Ubeywarna R.C</h3>
+                        <p class="role">Telemetry & Backend Lead</p>
+                        <p class="email"><i class="ph ph-envelope-simple"></i> it22339874@my.sliit.lk</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga.</span>
+            </div>
+            <p>&copy; 2026 Lakmaga Research Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Apply tilt effect explicitly mapped to team cards and achievement lists
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.team-card, .list-item');
+            items.forEach(card => card.classList.add('impact-card')); // Reusing the established class handles from script.js
+        });
+    </script>
+</body>
+</html>

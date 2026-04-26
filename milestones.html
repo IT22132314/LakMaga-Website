@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakmaga | Milestones</title>
+
+    <!-- Google Fonts -->
+    <link rel="icon" href="assets/images/icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 10rem 10% 4rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Extended Customizations for Milestone badges */
+        .milestone-badge {
+            background: rgba(123, 44, 191, 0.15);
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .timeline-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem !important;
+        }
+        
+        .timeline-content {
+            cursor: default; /* Overriding cursor rule so tilt effect can still work but feels clean */
+        }
+        .timeline-content h3 {
+            font-size: 1.6rem;
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background glowing orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga<span class="dot">.</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Project <i class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#features" class="dropdown-item"><i class="ph ph-star"></i> Features</a>
+                        <a href="index.html#tech" class="dropdown-item"><i class="ph ph-cpu"></i> Technologies</a>
+                        <a href="index.html#gallery" class="dropdown-item"><i class="ph ph-image"></i> Gallery</a>
+                        <a href="index.html#impact" class="dropdown-item"><i class="ph ph-trend-up"></i> Impact</a>
+                    </div>
+                </div>
+                <a href="domain.html" class="nav-link">Domain</a>
+                <a href="milestones.html" class="nav-link active">Milestones</a>
+                <a href="documents.html" class="nav-link">Documents</a>
+                <a href="presentations.html" class="nav-link">Presentations</a>
+                <a href="contact.html" class="nav-link nav-btn">Contact Us</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="badge fade-in-up">Project Tracking</div>
+        <h1 class="hero-title fade-in-up delay-1">Evaluation <span class="gradient-text">Milestones</span></h1>
+        <p class="hero-subtitle fade-in-up delay-2" style="margin: 0 auto; max-width: 600px;">The strategic timeline establishing expectations, rigorous evaluations, and functional benchmarks for the research project.</p>
+    </header>
+
+    <!-- Milestones Timeline -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="timeline">
+                
+                <!-- Milestone 1 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot completed"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date"><i class="ph ph-calendar-blank"></i> [Start Date Placeholder]</div>
+                            <div class="milestone-badge"><i class="ph ph-medal"></i> Marks: [00]%</div>
+                        </div>
+                        <h3>1. Project Proposal</h3>
+                        <p>Initial concept and idea validation. Establish the problem scope, justify the literature review constraints, and solidify approval from the academic review committee.</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="timeline-item fade-in-up delay-1">
+                    <div class="timeline-dot completed"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date"><i class="ph ph-calendar-blank"></i> [Date Placeholder]</div>
+                            <div class="milestone-badge"><i class="ph ph-medal"></i> Marks: [00]%</div>
+                        </div>
+                        <h3>2. Progress Presentation 1</h3>
+                        <p>System architecture and design. This phase establishes our core VR mechanic structures, user flows, software pipeline methodology, and database definitions.</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="timeline-item fade-in-up delay-2">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date"><i class="ph ph-calendar-blank"></i> [Date Placeholder]</div>
+                            <div class="milestone-badge"><i class="ph ph-medal"></i> Marks: [00]%</div>
+                        </div>
+                        <h3>3. Progress Presentation 2</h3>
+                        <p>Implementation progress and system testing. Showcasing beta levels embedded within Meta Quest 3, functionality of interactive curriculum puzzles, and ensuring telemetry logic pushes correctly.</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="timeline-item fade-in-up delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date"><i class="ph ph-calendar-blank"></i> [Date Placeholder]</div>
+                            <div class="milestone-badge" style="background: rgba(255,255,255,0.05); border-color: gray; color: gray;"><i class="ph ph-medal"></i> Marks: [00]%</div>
+                        </div>
+                        <h3>4. Final Assessment</h3>
+                        <p>Complete system demonstration. Review of comprehensive performance statistics over pilot deployments. Demonstrating stable 72FPS environments and full functionality.</p>
+                    </div>
+                </div>
+
+                <!-- Milestone 5 -->
+                <div class="timeline-item fade-in-up delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-date"><i class="ph ph-calendar-blank"></i> [Final Date Placeholder]</div>
+                            <div class="milestone-badge" style="background: rgba(255,255,255,0.05); border-color: gray; color: gray;"><i class="ph ph-medal"></i> Marks: [00]%</div>
+                        </div>
+                        <h3>5. Viva / Final Defense</h3>
+                        <p>Oral evaluation and active project defense before the entire research committee. Formal interrogation of methodological limits and resulting success values.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga.</span>
+            </div>
+            <p>&copy; 2026 Lakmaga Research Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Apply tilt specifically for timeline items 
+        // using the global tilt effect logic already available in script.js
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.timeline-content');
+            items.forEach(card => card.classList.add('impact-card')); // Reusing the established class handles from script.js 
+        });
+    </script>
+</body>
+</html>

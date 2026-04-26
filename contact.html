@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakmaga | Contact Us</title>
+
+    <!-- Google Fonts -->
+    <link rel="icon" href="assets/images/icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 10rem 10% 4rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .abstract-text {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Mobile responsive adjustments specific to Contact */
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background glowing orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga<span class="dot">.</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Project <i class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#features" class="dropdown-item"><i class="ph ph-star"></i> Features</a>
+                        <a href="index.html#tech" class="dropdown-item"><i class="ph ph-cpu"></i> Technologies</a>
+                        <a href="index.html#gallery" class="dropdown-item"><i class="ph ph-image"></i> Gallery</a>
+                        <a href="index.html#impact" class="dropdown-item"><i class="ph ph-trend-up"></i> Impact</a>
+                    </div>
+                </div>
+                <a href="domain.html" class="nav-link">Domain</a>
+                <a href="milestones.html" class="nav-link">Milestones</a>
+                <a href="documents.html" class="nav-link">Documents</a>
+                <a href="presentations.html" class="nav-link">Presentations</a>
+                <a href="contact.html" class="nav-link nav-btn">Contact Us</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="badge fade-in-up">Get In Touch</div>
+        <h1 class="hero-title fade-in-up delay-1">Contact <span class="gradient-text">Us</span></h1>
+        <p class="abstract-text fade-in-up delay-2">Feel free to contact us for more information about the Lakmaga VR educational platform. We welcome inquiries regarding research collaborations, institutional deployments, or feedback from educational practitioners.</p>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section" style="padding-top: 0; min-height: auto; margin-bottom: 5rem;">
+        <div class="container fade-in-up delay-3">
+            <div class="contact-container">
+                <!-- Contact Info left panel -->
+                <div class="contact-info">
+                    <div class="contact-item impact-card" style="padding: 1.5rem;">
+                        <div class="contact-icon"><i class="ph ph-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>research@lakmaga.edu.lk</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item impact-card" style="padding: 1.5rem;">
+                        <div class="contact-icon"><i class="ph ph-phone"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+94 11 234 5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item impact-card" style="padding: 1.5rem;">
+                        <div class="contact-icon"><i class="ph ph-buildings"></i></div>
+                        <div>
+                            <h4>Institution</h4>
+                            <p>Sri Lanka Institute of Information Technology (SLIIT), Malabe.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form right panel -->
+                <form class="contact-form impact-card" id="contactForm" style="padding: 2.5rem; border-color: rgba(0, 240, 255, 0.3);">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Send a Message</h3>
+                    
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" rows="6" placeholder="How can we help? (e.g. Research inquiry, deployment question)" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary submit-btn" style="width: 100%; justify-content: center;">
+                        Send Message <i class="ph ph-paper-plane-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga.</span>
+            </div>
+            <p>&copy; 2026 Lakmaga Research Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

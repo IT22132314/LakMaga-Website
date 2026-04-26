@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lakmaga: A Gamified VR Educational Platform for Middle School Curriculum in Sri Lanka.">
+    <title>Lakmaga | VR Educational Platform</title>
+
+    <!-- Google Fonts -->
+    <link rel="icon" href="assets/images/icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Background glowing orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga<span class="dot">.</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Project <i
+                            class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#features" class="dropdown-item"><i class="ph ph-star"></i> Features</a>
+                        <a href="#tech" class="dropdown-item"><i class="ph ph-cpu"></i> Technologies</a>
+                        <a href="#gallery" class="dropdown-item"><i class="ph ph-image"></i> Gallery</a>
+                        <a href="#impact" class="dropdown-item"><i class="ph ph-trend-up"></i> Impact</a>
+                    </div>
+                </div>
+                <a href="domain.html" class="nav-link">Domain</a>
+                <a href="milestones.html" class="nav-link">Milestones</a>
+                <a href="documents.html" class="nav-link">Documents</a>
+                <a href="presentations.html" class="nav-link">Presentations</a>
+                <a href="contact.html" class="nav-link nav-btn">Contact Us</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header id="home" class="hero-section center-aligned">
+        <div class="hero-bg-layer" id="vr-hero-bg"></div>
+        <div class="hero-bg-overlay"></div>
+
+        <div class="hero-content fade-in-up">
+            <div class="badge">Research Project</div>
+            <h1 class="hero-title">Lakmaga: A Gamified <br><span class="gradient-text">VR Educational</span> Platform
+            </h1>
+            <p class="hero-subtitle">An interactive, curriculum-aligned virtual reality platform designed to enhance
+                conceptual understanding among Sri Lankan middle school students through gamified experiential learning.
+            </p>
+            <div class="hero-actions">
+                <a href="#about" class="btn btn-primary" style="margin-right: 1rem;">
+                    Explore Project <i class="ph ph-arrow-down"></i>
+                </a>
+                <a href="presentations.html" class="btn btn-outline"
+                    style="border: 1px solid var(--primary); padding: 0.8rem 2rem; border-radius: 30px; font-weight: 600; color: var(--primary);">
+                    View Slides
+                </a>
+            </div>
+
+            <div class="glass-overlay-stats hero-stats">
+                <div class="stat">
+                    <i class="ph ph-graduation-cap"></i>
+                    <span>STEM Focus</span>
+                </div>
+                <div class="stat">
+                    <i class="ph ph-game-controller"></i>
+                    <span>Gamified</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. About the Project -->
+    <section id="about" class="section section-darker">
+        <div class="about-container fade-in-up">
+            <h2 class="section-title">About the <span class="gradient-text">Project</span></h2>
+            <div class="about-content">
+                <p class="abstract-text">
+                    Lakmaga is a gamified virtual reality educational platform developed to address the limitations of
+                    traditional STEM education in Sri Lanka. The system leverages immersive 3D environments and
+                    interactive simulations to transform abstract theoretical concepts into tangible learning
+                    experiences.
+                    <br><br>
+                    Set within a historically reconstructed Sigiriya village, the platform integrates mathematics,
+                    science, technology, and engineering concepts into culturally contextualized tasks. By combining
+                    gamification principles with situated learning theory, Lakmaga promotes active learning, critical
+                    thinking, and long-term knowledge retention.
+                </p>
+                <div class="about-visual fade-in-up delay-1 video-container">
+                    <video class="rounded-img" muted loop playsinline controls poster="assets/images/hero-bg.png">
+                        <!-- Placeholder source: Replace 'assets/video/intro.mp4' with your actual video path once ready -->
+                        <source src="assets/video/intro.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Key Features Section -->
+    <section id="features" class="section">
+        <div class="section-header fade-in-up">
+            <h2 class="section-title">Key <span class="gradient-text">Features</span></h2>
+            <p class="section-desc">Pioneering a new standard for interactive classroom education.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card fade-in-up">
+                <div class="card-icon"><i class="ph ph-headset"></i></div>
+                <h3>Immersive 3D Environment</h3>
+                <p>An immersive 3D learning environment closely based on authentic Sri Lankan heritage, such as the
+                    ancient Sigiriya rock fortress.</p>
+            </div>
+            <div class="feature-card fade-in-up delay-1">
+                <div class="card-icon"><i class="ph ph-books"></i></div>
+                <h3>Curriculum-Aligned STEM</h3>
+                <p>Curriculum-aligned interactive STEM modules mapped strictly in accordance with the national middle
+                    school syllabus.</p>
+            </div>
+            <div class="feature-card fade-in-up delay-2">
+                <div class="card-icon"><i class="ph ph-sword"></i></div>
+                <h3>Gamified Interactions</h3>
+                <p>Interactive gamified tasks equipped with real-time feedback mechanisms that make academic challenges
+                    engaging.</p>
+            </div>
+            <div class="feature-card fade-in-up delay-3">
+                <div class="card-icon"><i class="ph ph-chart-line-up"></i></div>
+                <h3>Passive Telemetry</h3>
+                <p>A passive telemetry system designed for objective performance evaluation without disrupting the
+                    student's VR experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3.5 How It Works Section -->
+    <section id="workflow" class="section section-darker">
+        <div class="section-header fade-in-up">
+            <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+            <p class="section-desc">A seamless, intuitive educational pipeline.</p>
+        </div>
+
+        <div class="workflow-grid fade-in-up delay-1">
+            <div class="workflow-step">
+                <div class="step-icon"><i class="ph ph-mask-happy"></i></div>
+                <h3>1. Enter VR Environment</h3>
+                <p>Equip the headset and step instantly into the ancient Sigiriya village reconstruction.</p>
+            </div>
+            <div class="workflow-step">
+                <div class="step-icon"><i class="ph ph-hand-tap"></i></div>
+                <h3>2. Interact with Tasks</h3>
+                <p>Engage physically with the 3D ecosystem to solve STEM puzzles and challenges.</p>
+            </div>
+            <div class="workflow-step">
+                <div class="step-icon"><i class="ph ph-chat-centered-text"></i></div>
+                <h3>3. Receive Feedback</h3>
+                <p>Get in-game real-time responses to guide learning and correct misconceptions instantly.</p>
+            </div>
+            <div class="workflow-step">
+                <div class="step-icon"><i class="ph ph-chart-bar"></i></div>
+                <h3>4. Performance tracking</h3>
+                <p>Educators receive passive telemetry data tracking interaction success rates and struggles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Technologies Used -->
+    <section id="tech" class="section">
+        <div class="section-header fade-in-up">
+            <h2 class="section-title">Built With <span class="gradient-text">Next-Gen Tech</span></h2>
+            <p class="section-desc">The hardware and software stack powering the Lakmaga ecosystem.</p>
+        </div>
+
+        <div class="tech-grid fade-in-up">
+            <div class="tech-item">
+                <div class="tech-icon"><i class="ph ph-cube"></i></div>
+                <h4>Unity 3D</h4>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon"><i class="ph ph-goggles"></i></div>
+                <h4>Meta Quest 3</h4>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon"><i class="ph ph-pencil-line"></i></div>
+                <h4>Blender</h4>
+            </div>
+            <div class="tech-item">
+                <div class="tech-icon"><i class="ph ph-hand-swipe-right"></i></div>
+                <h4>XR Interaction Toolkit</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.5. Gallery Section -->
+    <section id="gallery" class="section section-darker">
+        <div class="section-header fade-in-up">
+            <h2 class="section-title">Testing <span class="gradient-text">Gallery</span></h2>
+            <p class="section-desc">A visual showcase of our testing environments, gameplay interactions, and
+                behind-the-scenes progress.</p>
+        </div>
+
+        <div class="gallery-grid fade-in-up delay-1">
+            <div class="gallery-item span-col-2 span-row-2" data-src="assets/video/Testing.MOV" data-type="video">
+                <video src="assets/video/Testing.mp4" muted loop playsinline></video>
+                <div class="gallery-overlay"><i class="ph ph-play-circle"></i></div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/test1.jpg" data-type="image">
+                <img src="assets/images/test1.jpg" alt="Testing Image 1">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-item span-row-2" data-src="assets/images/test2.JPG" data-type="image">
+                <img src="assets/images/test2.JPG" alt="Testing Image 2">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-item span-col-2" data-src="assets/images/test3.jpeg" data-type="image">
+                <img src="assets/images/test3.jpeg" alt="Testing Image 3">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/test4.jpeg" data-type="image">
+                <img src="assets/images/test4.jpeg" alt="Testing Image 4">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/test5.jpeg" data-type="image">
+                <img src="assets/images/test5.jpeg" alt="Testing Image 5">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-item span-col-2 span-row-2" data-src="assets/images/test6.jpeg" data-type="image">
+                <img src="assets/images/test6.jpeg" alt="Testing Image 6">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/test7.jpeg" data-type="image">
+                <img src="assets/images/test7.jpeg" alt="Testing Image 7">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-item span-row-2" data-src="assets/images/test8.jpg" data-type="image">
+                <img src="assets/images/test8.jpg" alt="Testing Image 8">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/test9.JPG" data-type="image">
+                <img src="assets/images/test9.JPG" alt="Testing Image 9">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-item span-col-2" data-src="assets/images/test10.jpg" data-type="image">
+                <img src="assets/images/test10.jpg" alt="Testing Image 10">
+                <div class="gallery-overlay"><i class="ph ph-magnifying-glass-plus"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Research Impact Section -->
+    <section id="impact" class="section section-darker">
+        <div class="section-header fade-in-up">
+            <h2 class="section-title">Research <span class="gradient-text">Impact</span></h2>
+            <p class="section-desc">Measured outcomes demonstrating the platform's effectiveness.</p>
+        </div>
+
+        <div class="impact-grid">
+            <div class="impact-card fade-in-up">
+                <div class="impact-number gradient-text"><span class="counter" data-target="90">0</span>%</div>
+                <h3>Accuracy</h3>
+                <p>Achieved a 90% accuracy in ecosystem classification tasks among test participants.</p>
+            </div>
+            <div class="impact-card fade-in-up delay-1">
+                <div class="impact-number gradient-text"><span class="counter" data-target="72">0</span> FPS</div>
+                <h3>Performance</h3>
+                <p>Stable 72 FPS performance ensuring maximum user comfort without motion sickness.</p>
+            </div>
+            <div class="impact-card fade-in-up delay-2">
+                <div class="impact-number gradient-text"><span class="counter" data-target="40">0</span>%</div>
+                <h3>Improvement</h3>
+                <p>Up to 40% improvement in memory retention compared to traditional learning methods.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Section Recap & CTA -->
+    <section class="section text-center fade-in-up">
+        <h2 class="section-title">Ready to Step into the <span class="gradient-text">Future?</span></h2>
+        <p class="section-desc" style="margin-bottom: 2rem;">Join the educational revolution powering Sri Lanka's youth.
+        </p>
+        <a href="#" class="btn btn-primary" style="margin-bottom: 3rem;">View Documentations</a>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga.</span>
+            </div>
+            <p>&copy; 2026 Lakmaga Research Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

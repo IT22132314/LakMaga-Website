@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakmaga | Documents</title>
+
+    <!-- Google Fonts -->
+    <link rel="icon" href="assets/images/icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 10rem 10% 4rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .doc-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .doc-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .doc-icon {
+            font-size: 3rem;
+            color: #ff3366; /* PDF Red */
+            background: rgba(255, 51, 102, 0.1);
+            padding: 0.8rem;
+            border-radius: 12px;
+            display: flex;
+        }
+
+        .doc-card h3 {
+            font-size: 1.3rem;
+            color: var(--text-main);
+        }
+
+        .doc-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            flex-grow: 1; /* Pushes button to bottom */
+            margin-bottom: 2rem;
+        }
+
+        .doc-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .btn-doc {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Upcoming / Disabled docs styles */
+        .doc-card.upcoming {
+            opacity: 0.6;
+            border-style: dashed;
+            border-color: var(--border-color);
+        }
+        .doc-card.upcoming .doc-icon {
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .doc-card.upcoming .btn.disabled {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            border-color: var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background glowing orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga<span class="dot">.</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Project <i class="ph ph-caret-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#features" class="dropdown-item"><i class="ph ph-star"></i> Features</a>
+                        <a href="index.html#tech" class="dropdown-item"><i class="ph ph-cpu"></i> Technologies</a>
+                        <a href="index.html#gallery" class="dropdown-item"><i class="ph ph-image"></i> Gallery</a>
+                        <a href="index.html#impact" class="dropdown-item"><i class="ph ph-trend-up"></i> Impact</a>
+                    </div>
+                </div>
+                <a href="domain.html" class="nav-link">Domain</a>
+                <a href="milestones.html" class="nav-link">Milestones</a>
+                <a href="documents.html" class="nav-link active">Documents</a>
+                <a href="presentations.html" class="nav-link">Presentations</a>
+                <a href="contact.html" class="nav-link nav-btn">Contact Us</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="badge fade-in-up">Research Repository</div>
+        <h1 class="hero-title fade-in-up delay-1">Project <span class="gradient-text">Documents</span></h1>
+        <p class="hero-subtitle fade-in-up delay-2" style="margin: 0 auto; max-width: 600px;">Access official documentation, architectural designs, and academic summaries charting our research journey.</p>
+    </header>
+
+    <!-- Primary Documents Section -->
+    <section class="section" style="padding-top: 0; min-height: auto;">
+        <div class="container">
+            <div class="section-header fade-in-up" style="text-align: left; margin-bottom: 2rem;">
+                <h2 style="font-size: 2rem;">Available <span class="gradient-text">Downloads</span></h2>
+            </div>
+            
+            <div class="docs-grid">
+                
+                <!-- Document 1 -->
+                <div class="doc-card fade-in-up delay-1">
+                    <div class="doc-card-header">
+                        <div class="doc-icon"><i class="ph ph-file-pdf"></i></div>
+                        <h3>Project Charter</h3>
+                    </div>
+                    <p>The foundational document defining the scope, critical objectives, timeline constraints, and direct stakeholders involved in pushing Lakmaga forward.</p>
+                    <div class="doc-actions">
+                        <a href="#" class="btn btn-primary btn-doc">
+                            <i class="ph ph-download-simple"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Document 2 -->
+                <div class="doc-card fade-in-up delay-2">
+                    <div class="doc-card-header">
+                        <div class="doc-icon"><i class="ph ph-file-pdf"></i></div>
+                        <h3>Proposal Document</h3>
+                    </div>
+                    <p>Comprehensive breakdown of the identified research gap in localized VR STEM tech, preliminary literature surveys, and our methodological defense strategies.</p>
+                    <div class="doc-actions">
+                        <a href="#" class="btn btn-primary btn-doc">
+                            <i class="ph ph-download-simple"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Document 3 -->
+                <div class="doc-card fade-in-up delay-3">
+                    <div class="doc-card-header">
+                        <div class="doc-icon" style="color: #00f0ff; background: rgba(0, 240, 255, 0.1);"><i class="ph ph-file-text"></i></div>
+                        <h3>Checklists / Reports</h3>
+                    </div>
+                    <p>Current pilot progress checks, performance baseline telemetry readouts from Meta Quest 3 testing groups, and periodic evaluation status reports.</p>
+                    <div class="doc-actions">
+                        <a href="#" class="btn btn-primary btn-doc">
+                            <i class="ph ph-download-simple"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Documents Section -->
+    <section class="section section-darker" style="min-height: auto;">
+        <div class="container">
+            <div class="section-header fade-in-up" style="text-align: left; margin-bottom: 2rem;">
+                <h2 style="font-size: 2rem;">Upcoming <span style="color: var(--text-muted);">Documents</span></h2>
+            </div>
+            
+            <div class="docs-grid">
+                
+                <!-- Upcoming 1 -->
+                <div class="doc-card upcoming fade-in-up delay-1">
+                    <div class="doc-card-header">
+                        <div class="doc-icon"><i class="ph ph-lock-key"></i></div>
+                        <h3>Final Research Document</h3>
+                    </div>
+                    <p>The definitive 90+ page academic publication aggregating data flows, testing methodology results, final thesis defense points, and comprehensive conclusions regarding memory retention in VR.</p>
+                    <div class="doc-actions">
+                        <button class="btn btn-outline btn-doc disabled" disabled>
+                            <i class="ph ph-clock"></i> Available Post-Defense
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Upcoming 2 -->
+                <div class="doc-card upcoming fade-in-up delay-2">
+                    <div class="doc-card-header">
+                        <div class="doc-icon"><i class="ph ph-lock-key"></i></div>
+                        <h3>Telemetry Datasets</h3>
+                    </div>
+                    <p>Raw JSON telemetry outputs validating the 90% accuracy jump and physical tracking mechanics recorded during Grade 7–11 testing populations.</p>
+                    <div class="doc-actions">
+                        <button class="btn btn-outline btn-doc disabled" disabled>
+                            <i class="ph ph-clock"></i> Available Post-Defense
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/icon.jpg" alt="Lakmaga Logo">
+                <span>Lakmaga.</span>
+            </div>
+            <p>&copy; 2026 Lakmaga Research Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Apply tilt effect specifically for doc-cards 
+        // to inherit the VR aesthetic from script.js
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.doc-card:not(.upcoming)');
+            items.forEach(card => card.classList.add('impact-card')); // Reusing the established class handles from script.js 
+        });
+    </script>
+</body>
+</html>
