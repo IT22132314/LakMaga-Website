@@ -684,6 +684,18 @@ nav.scrolled { background: rgba(30, 24, 20, 0.85); backdrop-filter: blur(12px); 
     max-height: 90vh;
     display: block;
 }
+
+.lightbox-content video {
+    min-width: 80vw;
+    max-width: 1200px;
+    background: #000;
+}
+
+@media (max-width: 768px) {
+    .lightbox-content video {
+        min-width: 95vw;
+    }
+}
 .lightbox-close {
     position: absolute;
     top: 2rem; right: 3rem;
