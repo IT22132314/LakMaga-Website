@@ -27,46 +27,101 @@
         }
         
         .presentations-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
             margin-bottom: 5rem;
         }
         
         .presentation-card {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: center;
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            overflow: hidden;
+            padding: 1.5rem 2rem;
             transition: var(--transition);
-            height: 100%;
+            gap: 2rem;
+        }
+
+        .presentation-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .presentation-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            background: rgba(255, 184, 77, 0.1);
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 184, 77, 0.2);
         }
 
         .presentation-info {
             display: flex;
             flex-direction: column;
             flex-grow: 1;
-            padding: 1.5rem;
+        }
+
+        .presentation-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
         }
 
         .presentation-info p {
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
+            margin-bottom: 0;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .presentation-actions {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
         }
 
         .btn-doc {
-            width: 100%;
-            justify-content: center;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
         /* Upcoming / Disabled styles */
-        .presentation-thumb.locked {
-            background: Repeating-linear-gradient(
-                45deg,
-                rgba(0,0,0,0.5),
-                rgba(0,0,0,0.5) 10px,
-                rgba(10,10,10,0.5) 10px,
-                rgba(10,10,10,0.5) 20px
-            );
+        .presentation-card.locked {
+            opacity: 0.6;
+            border-style: dashed;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .presentation-card.locked .presentation-icon {
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .presentation-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1.5rem;
+            }
+            .presentation-actions {
+                width: 100%;
+                justify-content: center;
+                margin-top: 1rem;
+            }
         }
 
     </style>
@@ -126,13 +181,14 @@
                 
                 <!-- Presentation 1 -->
                 <div class="presentation-card fade-in-up delay-1">
-                    <div class="presentation-thumb">
-                        <img src="assets/images/hero-bg.png" alt="Proposal Thumbnail">
-                        <div class="play-overlay"><i class="ph ph-projector-screen-chart"></i></div>
+                    <div class="presentation-icon">
+                        <i class="ph ph-presentation-chart"></i>
                     </div>
                     <div class="presentation-info">
                         <h3>Proposal Presentation</h3>
                         <p>The initial concept pitch defending the academic problem domain, methodology, and viability of building a VR ecosystem mapped to Sri Lanka's syllabus.</p>
+                    </div>
+                    <div class="presentation-actions">
                         <a href="assets/documents/Proposal%20Presentation.pdf" target="_blank" class="btn btn-primary btn-doc">
                             <i class="ph ph-download-simple"></i> Download PDF
                         </a>
@@ -141,13 +197,14 @@
 
                 <!-- Presentation 2 -->
                 <div class="presentation-card fade-in-up delay-2">
-                    <div class="presentation-thumb">
-                        <img src="assets/images/vr-sigiriya.png" style="filter: hue-rotate(60deg) saturate(1.2);" alt="Progress 1 Thumbnail">
-                        <div class="play-overlay"><i class="ph ph-projector-screen-chart"></i></div>
+                    <div class="presentation-icon">
+                        <i class="ph ph-chart-line-up"></i>
                     </div>
                     <div class="presentation-info">
                         <h3>Progress Presentation 1</h3>
                         <p>Detailed insight into the system architecture, early UI design sketches, establishing the Unity 3D core environments, and preliminary problem resolutions.</p>
+                    </div>
+                    <div class="presentation-actions">
                         <a href="assets/documents/Progress%20Presentation%201.pdf" target="_blank" class="btn btn-primary btn-doc">
                             <i class="ph ph-download-simple"></i> Download PDF
                         </a>
@@ -156,13 +213,14 @@
 
                 <!-- Presentation 3 -->
                 <div class="presentation-card fade-in-up delay-3">
-                    <div class="presentation-thumb">
-                        <img src="assets/images/vr-sigiriya.png" style="filter: hue-rotate(280deg);" alt="Progress 2 Thumbnail">
-                        <div class="play-overlay"><i class="ph ph-projector-screen-chart"></i></div>
+                    <div class="presentation-icon">
+                        <i class="ph ph-chart-polar"></i>
                     </div>
                     <div class="presentation-info">
                         <h3>Progress Presentation 2</h3>
                         <p>Deep dive into implementation progress, physical Meta Quest 3 test results, telemetry datamining, and showcasing near-final curriculum learning modules.</p>
+                    </div>
+                    <div class="presentation-actions">
                         <a href="assets/documents/Progress%20Presentation%202.pdf" target="_blank" class="btn btn-primary btn-doc">
                             <i class="ph ph-download-simple"></i> Download PDF
                         </a>
@@ -180,16 +238,18 @@
                 <h2 style="font-size: 2rem;">Upcoming <span style="color: var(--text-muted);">Defense</span></h2>
             </div>
             
-            <div class="presentations-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 350px));">
+            <div class="presentations-grid">
                 
                 <!-- Upcoming Presentation -->
-                <div class="presentation-card locked fade-in-up delay-1" style="opacity: 0.6; border-style: dashed;">
-                    <div class="presentation-thumb locked">
-                        <div class="play-overlay"><i class="ph ph-lock-key"></i></div>
+                <div class="presentation-card locked fade-in-up delay-1">
+                    <div class="presentation-icon">
+                        <i class="ph ph-lock-key"></i>
                     </div>
                     <div class="presentation-info">
                         <h3>Final Presentation</h3>
                         <p>The ultimate research aggregation covering performance improvements, finalized UI/UX, and comprehensive testing summaries for the Viva evaluation.</p>
+                    </div>
+                    <div class="presentation-actions">
                         <button class="btn btn-outline btn-doc disabled" disabled>
                             <i class="ph ph-clock"></i> Available Post-Defense
                         </button>
