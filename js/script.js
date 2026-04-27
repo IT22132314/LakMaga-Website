@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animationElements.forEach(el => observer.observe(el));
 });
 
-// Form Submission Prevention (Demo)
+// Form Submission to FormSubmit
 const contactForm = document.getElementById('contactForm');
 if(contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -115,7 +115,13 @@ if(contactForm) {
         
         btn.innerHTML = 'Sending... <i class="ph ph-spinner-gap ph-spin"></i>';
         
-        setTimeout(() => {
+        const formData = new FormData(contactForm);
+        fetch('https://formsubmit.co/ajax/chamikaharsha2001@gmail.com', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
             btn.innerHTML = 'Message Sent! <i class="ph ph-check-circle"></i>';
             btn.classList.replace('btn-primary', 'btn-outline');
             contactForm.reset();
@@ -124,7 +130,13 @@ if(contactForm) {
                 btn.innerHTML = originalText;
                 btn.classList.replace('btn-outline', 'btn-primary');
             }, 3000);
-        }, 1500);
+        })
+        .catch(error => {
+            btn.innerHTML = 'Error! <i class="ph ph-x-circle"></i>';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+            }, 3000);
+        });
     });
 }
 
