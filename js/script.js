@@ -583,4 +583,134 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- Chart.js Initialization ---
+    const chartsContainer = document.querySelector('.charts-container');
+    let chartsInitialized = false;
+
+    if (chartsContainer && typeof Chart !== 'undefined') {
+        const chartObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !chartsInitialized) {
+                    chartsInitialized = true;
+                    initCharts();
+                    chartObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        chartObserver.observe(chartsContainer);
+    }
+
+    function initCharts() {
+        // Chart 1: Pre-test vs Post-test Scores
+        const ctxPrePost = document.getElementById('prePostChart');
+        if(ctxPrePost) {
+            new Chart(ctxPrePost.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ecosystems', 'Energy Systems', 'Plant Biology'],
+                    datasets: [
+                        {
+                            label: 'Traditional Learning (Pre-VR)',
+                            data: [45, 52, 48],
+                            backgroundColor: 'rgba(166, 75, 42, 0.7)',
+                            borderColor: 'rgba(166, 75, 42, 1)',
+                            borderWidth: 1,
+                            borderRadius: 6
+                        },
+                        {
+                            label: 'Lakmaga VR (Post-VR)',
+                            data: [88, 92, 85],
+                            backgroundColor: 'rgba(212, 175, 55, 0.7)',
+                            borderColor: 'rgba(212, 175, 55, 1)',
+                            borderWidth: 1,
+                            borderRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { color: '#F4EAD5', font: { family: 'Poppins' } }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Knowledge Retention Score (%)',
+                            color: '#F4EAD5',
+                            font: { family: 'Poppins', size: 16 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: '#BBAF9A' }
+                        },
+                        x: {
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: '#BBAF9A' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Chart 2: Student Engagement Levels
+        const ctxEngagement = document.getElementById('engagementChart');
+        if(ctxEngagement) {
+            new Chart(ctxEngagement.getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                    datasets: [{
+                        label: 'Active Engagement Duration (Mins)',
+                        data: [25, 35, 42, 48],
+                        fill: true,
+                        backgroundColor: 'rgba(251, 191, 36, 0.2)',
+                        borderColor: '#FBBF24',
+                        tension: 0.4,
+                        pointBackgroundColor: '#FBBF24',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#FBBF24'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    animation: {
+                        duration: 2500,
+                        easing: 'easeOutBounce'
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { color: '#F4EAD5', font: { family: 'Poppins' } }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Student Engagement Over Time',
+                            color: '#F4EAD5',
+                            font: { family: 'Poppins', size: 16 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: '#BBAF9A' }
+                        },
+                        x: {
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { color: '#BBAF9A' }
+                        }
+                    }
+                }
+            });
+        }
+    }
 });

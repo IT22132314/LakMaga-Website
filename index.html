@@ -18,6 +18,9 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -301,6 +304,33 @@
                 <div class="impact-number gradient-text"><span class="counter" data-target="40">0</span>%</div>
                 <h3>Improvement</h3>
                 <p>Up to 40% improvement in memory retention compared to traditional learning methods.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Science Component Demo & Results -->
+    <section id="science-demo" class="section">
+        <div class="section-header fade-in-up">
+            <h2 class="section-title">Science <span class="gradient-text">Component</span></h2>
+            <p class="section-desc">Project Demo & Test Results</p>
+        </div>
+
+        <div class="demo-video-wrapper fade-in-up delay-1">
+            <video controls playsinline poster="assets/images/test2.JPG">
+                <source src="assets/video/Project Demo - Science part.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="charts-container fade-in-up delay-2" style="margin-top: 4rem;">
+            <h3 class="text-center" style="margin-bottom: 3rem; font-size: 2.2rem;">Test <span class="gradient-text">Results</span></h3>
+            <div class="charts-grid">
+                <div class="chart-wrapper">
+                    <canvas id="prePostChart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="engagementChart"></canvas>
+                </div>
             </div>
         </div>
     </section>

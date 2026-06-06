@@ -910,3 +910,38 @@ footer p { color: var(--text-muted); font-size: 0.9rem; }
 .form-group input, .form-group textarea { width: 100%; padding: 1rem 1.2rem; background: rgba(0,0,0,0.3); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-main); font-family: var(--font-body); font-size: 1rem; transition: var(--transition); }
 .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 10px var(--primary-dim); }
 .submit-btn { align-self: flex-start; }
+
+/* Science Demo & Charts */
+.demo-video-wrapper {
+    max-width: 1000px;
+    margin: 0 auto 4rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid var(--border-color);
+}
+.demo-video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.chart-wrapper {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: var(--transition);
+}
+.chart-wrapper:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
